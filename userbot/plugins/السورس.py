@@ -679,7 +679,7 @@ async def psu(event):
     uname = platform.uname()
     cpufreq = psutil.cpu_freq()
     for i, percentage in enumerate(psutil.cpu_percent(percpu=True)):
-        cpuu = "**حجم استخدامك لالوالي :**\n"
+        cpuu = "**حجم استخدامك لسورس سيمو :**\n"
     cpuu += f"الاستخدام : `{psutil.cpu_percent()}%`\n"
     svmem = psutil.virtual_memory()
     help_string = f"{str(cpuu)}\n"
@@ -871,7 +871,7 @@ async def inlineiqthon(iqthon):
 async def iq(event):
     await edit_or_reply(event, """
  ✐  ⦗ اوامـر سـورس سيمو ⦘
-                                             
+                                            
 〖`.م1`〗⏎  اوامر الحساب 1
 〖`.م2`〗⏎  اوامر الحساب 2
 〖`.م3`〗⏎  اوامر الحساب 3
@@ -1743,18 +1743,18 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         result = None
         query = iqthon.text
         await bot.get_me()
-        if query.startswith("(الاوامر|الأوامر)") and iqthon.query.user_id == bot.uid:
+        if query.startswith("(الاوامر)") and iqthon.query.user_id == bot.uid:
             buttons = [[Button.inline("اوامر السورس", data="order1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="ord1pl"),],[Button.inline("اوامر الصيغ", data="ordsag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر الاعلانات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14"),],[Button.inline("الفارات", data="ordvars"),]]
             result = builder.article(title="iqthon",text=help2,buttons=buttons,link_preview=False)
             await iqthon.answer([result] if result else None)
-@bot.on(admin_cmd(outgoing=True, pattern="(الاوامر|الأوامر)"))
+@bot.on(admin_cmd(outgoing=True, pattern="(الاوامر)"))
 async def repoiqthon(iqthon):
     if iqthon.fwd_from:
         return
     TG_BOT = Config.TG_BOT_USERNAME
     if iqthon.reply_to_msg_id:
         await iqthon.get_reply_message()
-    response = await bot.inline_query(TG_BOT, "(الاوامر|الأوامر)")
+    response = await bot.inline_query(TG_BOT, "(الاوامر)")
     await response[0].click(iqthon.chat_id)
     await iqthon.delete()
 if Config.TG_BOT_USERNAME is not None and tgbot is not None :
