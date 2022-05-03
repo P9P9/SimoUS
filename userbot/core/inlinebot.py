@@ -20,7 +20,7 @@ from . import CMD_INFO, GRP_INFO, PLG_INFO, check_owner
 from .logger import logging
 LOGS = logging.getLogger(__name__)
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
-CATLOGO = "https://telegra.ph/file/11e7eb89f718840fb5782.jpg"
+CATLOGO = "https://telegra.ph/file/fb65dfda20146477c0f6b.jpg"
 tr = Config.COMMAND_HAND_LER
 def getkey(val):
     for key, value in GRP_INFO.items():
