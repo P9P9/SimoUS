@@ -1077,7 +1077,7 @@ async def tban(event):  # sourcery no-metrics
     if not user:
         return
     if not reason:
-        return await catevent.edit("☭ ⦙ رجاء طريقه كتابه الامر خاطئه قم بروئيه قناه شروحات الاوامر : @rxoxx")
+        return await catevent.edit("☭ ⦙ رجاء طريقه كتابه الامر خاطئه قم بروئيه قناه شروحات الاوامر : @ADWSL")
     reason = reason.split(" ", 1)
     hmm = len(reason)
     cattime = reason[0].strip()
@@ -2036,9 +2036,9 @@ async def iq(event):
     type_of_group = event.pattern_match.group(1)
     group_name = event.pattern_match.group(2)
     if type_of_group == "قناه":
-        descript = "☭ ⦙   هذه قناة إختبار أُنشئت بإستعمال الوالي العرب"
+        descript = "☭ ⦙   هذه قناة إختبار أُنشئت بإستعمال سورس سيمو"
     else:
-        descript = "☭ ⦙   هذه المجموعه إختبار أُنشئت بإستعمال الوالي العرب"
+        descript = "☭ ⦙   هذه المجموعه إختبار أُنشئت بإستعمال سورس سيمو"
     if type_of_group == "مجموعه":
         try:
             result = await event.client(functions.messages.CreateChatRequest(users=[Config.TG_BOT_USERNAME], title=group_name))
