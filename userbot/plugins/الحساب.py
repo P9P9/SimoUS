@@ -102,12 +102,12 @@ unplagiarism = gvarstatus("OR_UNPLAG") or "الغاء الانتحال"
 idee = gvarstatus("OR_ID") or "ايدي"
 OR_NAMEAUTO = gvarstatus("OR_NAMEAUTO") or "اسم وقتي"
 OR_AUTOBIO = gvarstatus("OR_AUTOBIO") or "نبذه وقتيه"
-digitalpfp = gvarstatus("AUTO_PIC") or "https://telegra.ph/file/f16221fabee921fe219ff.mp4"
+digitalpfp = gvarstatus("AUTO_PIC") or "https://telegra.ph/file/fb65dfda20146477c0f6b.jpg"
 NAME_OK = "**☭ ⦙  تم تغيير اسم حسابك بنجاح  ✅**"
 USERNAME_SUCCESS = "**☭ ⦙  تم تغيير معرّف حسابك بنجاح  ✅**"
 USERNAME_TAKEN = "**☭ ⦙  هذا المعرّف مستخدم  ❌**"
 plugin_category = "tools"
-DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "الحمد الله"
+DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "لا اله الا الله ↝ @ADWSL"
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 LOGS = logging.getLogger(__name__)
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
@@ -1054,7 +1054,7 @@ async def _(event):
         await catevent.edit(str(e))
     else:
         if photo:
-            await catevent.edit("**☭ ⦙   أشترك @rxoxx**")
+            await catevent.edit("**☭ ⦙   أشترك @ADWSL**")
             if photo.endswith((".mp4", ".MP4")):
                 # https://t.me/tgbetachat/324694
                 size = os.stat(photo).st_size
