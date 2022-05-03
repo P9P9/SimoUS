@@ -100,7 +100,7 @@ async def verifyLoggerGroup():
     else:
         descript = "♛ ︙ لا تحذف هذه المجموعة أو تغير إلى مجموعة (إذا قمت بتغيير المجموعة ، فسيتم فقد كل شيئ .)"
         _, groupid = await create_supergroup("مجموعه الاشعارات", iqthon, Config.TG_BOT_USERNAME, descript)
-                     await app.set_chat_photo(chat_id, photo="photo.jpg")
+                     await iqthon.set_chat_photo(chat_id, photo="photo.jpg")
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print("♛ ︙ تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
         flag = True
@@ -121,7 +121,7 @@ async def verifyLoggerGroup():
     else:
         descript = "♛ ︙ وظيفه هذا المجموعة لحفض رسائل التي تكون موجة اليك ان لم تعجبك هذا المجموعة قم بحذفها نهائيأ 👍 \n  الـسورس : - @ADWSL"
         _, groupid = await create_supergroup("مجموعه التخزين", iqthon, Config.TG_BOT_USERNAME, descript)
-                     await app.set_chat_photo(chat_id, photo="photo1.jpg")
+                     await iqthon.set_chat_photo(chat_id, photo="photo1.jpg")
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("♛ ︙ تم إنشاء مجموعة التخزين لـ PRIVATE_GROUP_BOT_API_ID بنجاح وإضافتها إلى المتغيرات.")
         flag = True
